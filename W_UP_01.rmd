@@ -46,7 +46,7 @@ basicCN <- ggplot(mydata,aes(x=position,y=pushups))
 ```
 
 ```{r}
-basicCN + geom_boxplot(notch=FALSE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Pushups by position")
+basicCN + geom_boxplot(notch=FALSE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Pushups By Position")
 ```
 
 The graphical descriptive results show skill players can perform on average a larger number of push-ups. The bottom 25th percentile of skill players is higher than the 75th percentile of the line players and is even nearly higher than the maximum number of pushups done by any line player.
@@ -69,9 +69,12 @@ The average skill player can do about three times as many pushups than the avera
 t.test(pushups~position,data=mydata)
 ```
 
-The p-value of .000009421 is sufficiently small that the results can be considered significant
+The p-value of .000009421 is sufficiently small that the results can be considered significant and is strong evidence against the null hypothesis.
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhaps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
+The large difference in means and the extremely small p-value indicate that there is a significant relationship between player position and ability to do push-ups. In which players in a skill position can do a larger number of push-ups than those in line positions.
+
+This is potentially due to the relative weight difference in the position types making a larger number of push-ups easier for the skill players than it is for the line players.
